@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}Sign in{% endblock %}{% block main_class %}auth-page{% endblock %}
+{% block content %}
+<section class="auth-card">
+  <div class="auth-logo">✓</div><p class="eyebrow">WELCOME BACK</p><h1>Sign in to TaskFlow</h1><p class="muted">Plan your day. Get things done.</p>
+  <form method="post" class="stack">
+    <label>Email address<input type="email" name="email" placeholder="you@example.com" required autocomplete="email"></label>
+    <label>Password<input type="password" name="password" placeholder="Enter your password" required autocomplete="current-password"></label>
+    <button class="btn primary full" type="submit">Sign in <span>→</span></button>
+  </form>
+  <p class="auth-bottom">New to TaskFlow? <a href="{{ url_for('register') }}">Create an account</a></p>
+</section>
+{% endblock %}
